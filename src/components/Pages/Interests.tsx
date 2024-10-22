@@ -1,18 +1,19 @@
-import InfoBox from "./InfoBox";
-import InfoBoxWrapper from "./InfoBoxWrapper";
+import InfoBox from "../HelperElems/InfoBox";
 import styled from "styled-components";
+import PageTitle from "../HelperElems/PageTitle";
 
-const StyledTitle = styled.h2`
-  font-size: 4em;
-  color: #8fc0a9;
-  margin-bottom: 10px;
+const StyledWrapper = styled.div`
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
 `;
 
 export default function Interests() {
   return (
     <>
-      <StyledTitle>Skills and Interests</StyledTitle>
-      <InfoBoxWrapper>
+      <PageTitle title="Skills and Interests" />
+      <StyledWrapper>
         <InfoBox>
           <h3>Programming Languages</h3>
           <h4>
@@ -36,7 +37,7 @@ export default function Interests() {
             Basketball
           </h4>
         </InfoBox>
-      </InfoBoxWrapper>
+      </StyledWrapper>
     </>
   );
 }

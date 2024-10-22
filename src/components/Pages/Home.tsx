@@ -1,14 +1,9 @@
 import styled from "styled-components";
+import PageTitle from "../HelperElems/PageTitle";
 
 const StyledImage = styled.img`
   display: block;
   max-width: 500px;
-`;
-
-const StyledTitle = styled.h2`
-  font-size: 4em;
-  color: #8fc0a9;
-  margin-bottom: 10px;
 `;
 
 const StyledText = styled.p`
@@ -20,7 +15,7 @@ const StyledText = styled.p`
 export default function Home() {
   return (
     <>
-      <StyledTitle>About Me</StyledTitle>
+      <PageTitle title="About Me" />
       <StyledImage src="../src/assets/buLogo.png" alt="BU Logo" />
       <StyledText>
         I am currently a third year undergraduate student studying Computer

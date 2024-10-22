@@ -1,18 +1,19 @@
-import InfoBox from "./InfoBox";
-import InfoBoxWrapper from "./InfoBoxWrapper";
+import InfoBox from "../HelperElems/InfoBox";
 import styled from "styled-components";
+import PageTitle from "../HelperElems/PageTitle";
 
-const StyledTitle = styled.h2`
-  font-size: 4em;
-  color: #8fc0a9;
-  margin-bottom: 10px;
+const StyledWrapper = styled.div`
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
 `;
 
 export default function Experience() {
   return (
     <>
-      <StyledTitle>Professional Experience</StyledTitle>
-      <InfoBoxWrapper>
+      <PageTitle title="Professional Experience" />
+      <StyledWrapper>
         <InfoBox>
           <h3>Deloitte</h3>
           <h4>Discovery 2 Intern</h4>
@@ -57,7 +58,7 @@ export default function Experience() {
             </li>
           </ul>
         </InfoBox>
-      </InfoBoxWrapper>
+      </StyledWrapper>
     </>
   );
 }

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { InfoBoxProps } from "./types";
 
 const StyledDiv = styled.div`
   background-color: #c8d5b9;
@@ -30,6 +31,6 @@ const StyledDiv = styled.div`
   }
 `;
 
-export default function InfoBox(props) {
-  return <StyledDiv>{props.children}</StyledDiv>;
+export default function InfoBox({ children }: InfoBoxProps) {
+  return <StyledDiv>{children}</StyledDiv>;
 }

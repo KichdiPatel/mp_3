@@ -1,12 +1,13 @@
-import InfoBox from "./InfoBox";
-import InfoBoxWrapper from "./InfoBoxWrapper";
+import InfoBox from "../HelperElems/InfoBox";
 import styled from "styled-components";
 import { useState } from "react";
+import PageTitle from "../HelperElems/PageTitle";
 
-const StyledTitle = styled.h2`
-  font-size: 4em;
-  color: #8fc0a9;
-  margin-bottom: 10px;
+const StyledWrapper = styled.div`
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
 `;
 
 const Calculator = styled.div`
@@ -90,8 +91,8 @@ export default function Projects() {
 
   return (
     <>
-      <StyledTitle>Other Projects</StyledTitle>
-      <InfoBoxWrapper>
+      <PageTitle title="Other Projects" />
+      <StyledWrapper>
         <InfoBox>
           <Calculator>
             <h3>Calculator</h3>
@@ -132,7 +133,7 @@ export default function Projects() {
                 {" "}
                 **{" "}
               </StyledButton>
-              <StyledButton onClick={() => clearCalc()}> Clear </StyledButton>
+              <StyledButton onClick={() => clearCalc()}>Clear</StyledButton>
             </CalcButtons>
             <Output
               style={{
@@ -165,7 +166,7 @@ export default function Projects() {
             </li>
           </ul>
         </InfoBox>
-      </InfoBoxWrapper>
+      </StyledWrapper>
     </>
   );
 }

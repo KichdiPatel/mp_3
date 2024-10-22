@@ -7,14 +7,15 @@ import {
 
 import styled from "styled-components";
 
-import Nav from "./components/Nav.tsx";
-import Home from "./components/Home.tsx";
-import Education from "./components/Education.tsx";
-import Experience from "./components/Experience.tsx";
-import Crypto from "./components/Crypto.tsx";
-import Interests from "./components/Interests.tsx";
-import Projects from "./components/Projects.tsx";
-import Footer from "./components/Footer.tsx";
+import Nav from "./components/HTMLTags/Nav.tsx";
+import Home from "./components/Pages/Home.tsx";
+import Education from "./components/Pages/Education.tsx";
+import Experience from "./components/Pages/Experience.tsx";
+import Crypto from "./components/Pages/Crypto.tsx";
+import Interests from "./components/Pages/Interests.tsx";
+import Projects from "./components/Pages/Projects.tsx";
+import Footer from "./components/HTMLTags/Footer.tsx";
+import Main from "./components/HTMLTags/Main.tsx";
 
 const Wrapper = styled.div`
   display: flex;
@@ -51,6 +52,7 @@ function Root() {
       <Nav />
       <Wrapper2>
         <StyledMain>
+          <Main />
           <Routes>
             <Route path={`/`} element={<Home />} />
             <Route path={`/education`} element={<Education />} />

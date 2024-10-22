@@ -1,18 +1,19 @@
-import InfoBox from "./InfoBox";
-import InfoBoxWrapper from "./InfoBoxWrapper";
+import InfoBox from "../HelperElems/InfoBox";
 import styled from "styled-components";
+import PageTitle from "../HelperElems/PageTitle";
 
-const StyledTitle = styled.h2`
-  font-size: 4em;
-  color: #8fc0a9;
-  margin-bottom: 10px;
+const StyledWrapper = styled.div`
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
 `;
 
 export default function Education() {
   return (
     <>
-      <StyledTitle>Education</StyledTitle>
-      <InfoBoxWrapper>
+      <PageTitle title="Education" />
+      <StyledWrapper>
         <InfoBox>
           <h3>Boston University College of Arts and Sciences</h3>
           <h4>Boston, MA</h4>
@@ -28,7 +29,7 @@ export default function Education() {
           <h4>High School Diploma</h4>
           <h4>Graduation Date: June 2022</h4>
         </InfoBox>
-      </InfoBoxWrapper>
+      </StyledWrapper>
     </>
   );
 }
