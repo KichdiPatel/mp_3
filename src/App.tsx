@@ -25,6 +25,11 @@ const Wrapper = styled.div`
   font-size: calc(10px + 0.2vw);
   background-color: #faf3dd;
   line-height: 1.6;
+
+  @media screen and (max-width: 750px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const Wrapper2 = styled.div`
@@ -35,7 +40,7 @@ const Wrapper2 = styled.div`
 
 const StyledMain = styled.main`
   flex: 1;
-  padding: 50px;
+  // padding: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,6 +49,12 @@ const StyledMain = styled.main`
   height: 100%;
   width: 70%;
   margin: auto;
+
+  @media screen and (max-width: 750px) {
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+  }
 `;
 
 function Root() {

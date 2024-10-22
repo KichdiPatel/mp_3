@@ -10,6 +10,12 @@ const StyledNav = styled.nav`
   justify-content: center;
   align-items: center;
   padding: 40px 20px;
+
+  @media screen and (max-width: 750px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const StyledUl = styled.ul`
@@ -18,12 +24,27 @@ const StyledUl = styled.ul`
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
+
+  @media screen and (max-width: 750px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+  }
 `;
 
 const StyledLi = styled.li`
   margin: 10px 0;
   list-style: none;
   text-align: center;
+
+  @media screen and (max-width: 750px) {
+    list-style: none;
+    margin: 0 10px;
+    padding: 0;
+  }
 `;
 
 const StyledLink = styled(Link)`

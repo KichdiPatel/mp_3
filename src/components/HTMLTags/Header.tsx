@@ -13,6 +13,16 @@ const StyledImage = styled.img`
   width: 100%;
   border-radius: 50%;
   border: 4px solid #faf3dd;
+
+  @media screen and (max-width: 750px) {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 100px;
+    max-height: 100px;
+    width: 100%;
+    border-radius: 50%;
+    border: 4px solid #faf3dd;
+  }
 `;
 
 const Title = styled.h1`
