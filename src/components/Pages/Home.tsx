@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <PageTitle title="About Me" />
-      <StyledImage src="../../assets/buLogo.png" alt="BU Logo" />
+      <StyledImage src="/assets/buLogo.png" alt="BU Logo" />
       <StyledText>
         I am currently a third year undergraduate student studying Computer
         Science with a minor in Business Administration. Finance fascinates me

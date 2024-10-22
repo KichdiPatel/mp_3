@@ -36,7 +36,7 @@ const Contact = styled.h4`
 export default function Header() {
   return (
     <HeaderWrapper>
-      <StyledImage src="../src/assets/headshot.jpg" alt="Ayan Headshot" />
+      <StyledImage src="/assets/headshot.jpg" alt="Ayan Headshot" />
       <Title>Ayan Patel's Resume</Title>
       <Subtitle>My Online Formatted Resume</Subtitle>
       <Contact>
