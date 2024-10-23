@@ -56,34 +56,26 @@ const StyledMain = styled.main`
   }
 `;
 
-const StyledBody = styled.body`
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-`;
-
 // Setting up the Page Using the Styled Components
 function Root() {
   return (
-    <StyledBody>
-      <Wrapper>
-        <Nav />
-        <Wrapper2>
-          <StyledMain>
-            <Main />
-            <Routes>
-              <Route path={`/`} element={<Home />} />
-              <Route path={`/education`} element={<Education />} />
-              <Route path={`/experience`} element={<Experience />} />
-              <Route path={`/crypto`} element={<Crypto />} />
-              <Route path={`/projects`} element={<Projects />} />
-              <Route path={`/interests`} element={<Interests />} />
-            </Routes>
-          </StyledMain>
-          <Footer />
-        </Wrapper2>
-      </Wrapper>
-    </StyledBody>
+    <Wrapper>
+      <Nav />
+      <Wrapper2>
+        <StyledMain>
+          <Main />
+          <Routes>
+            <Route path={`/`} element={<Home />} />
+            <Route path={`/education`} element={<Education />} />
+            <Route path={`/experience`} element={<Experience />} />
+            <Route path={`/crypto`} element={<Crypto />} />
+            <Route path={`/projects`} element={<Projects />} />
+            <Route path={`/interests`} element={<Interests />} />
+          </Routes>
+        </StyledMain>
+        <Footer />
+      </Wrapper2>
+    </Wrapper>
   );
 }
 

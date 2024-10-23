@@ -10,12 +10,15 @@ const StyledNav = styled.nav`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
+  padding: 40px 0;
 
   @media screen and (max-width: 750px) {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 `;
 
