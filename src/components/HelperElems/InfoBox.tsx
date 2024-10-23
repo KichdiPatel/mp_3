@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { InfoBoxProps } from "./types";
 
+// Setting up a styled div that can be used for any InfoBox regardless of order of the inner HTML elements
+
 const StyledDiv = styled.div`
   background-color: #c8d5b9;
   padding: 30px;
@@ -31,6 +33,7 @@ const StyledDiv = styled.div`
   }
 `;
 
+// Using Props to pass in the other elements 
 export default function InfoBox({ children }: InfoBoxProps) {
   return <StyledDiv>{children}</StyledDiv>;
 }

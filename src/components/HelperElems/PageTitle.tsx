@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { TitleProps } from "./types";
 
+//General Styled Title that I use on every page
 const StyledTitle = styled.h2`
   font-size: 4em;
   color: #8fc0a9;

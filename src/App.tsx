@@ -4,9 +4,7 @@ import {
   Routes,
   RouterProvider,
 } from "react-router-dom";
-
 import styled from "styled-components";
-
 import Nav from "./components/HTMLTags/Nav.tsx";
 import Home from "./components/Pages/Home.tsx";
 import Education from "./components/Pages/Education.tsx";
@@ -17,6 +15,7 @@ import Projects from "./components/Pages/Projects.tsx";
 import Footer from "./components/HTMLTags/Footer.tsx";
 import Main from "./components/HTMLTags/Main.tsx";
 
+// creating the styled components
 const Wrapper = styled.div`
   display: flex;
   min-height: 100vh;
@@ -57,28 +56,38 @@ const StyledMain = styled.main`
   }
 `;
 
+const StyledBody = styled.body`
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+`;
+
+// Setting up the Page Using the Styled Components
 function Root() {
   return (
-    <Wrapper>
-      <Nav />
-      <Wrapper2>
-        <StyledMain>
-          <Main />
-          <Routes>
-            <Route path={`/`} element={<Home />} />
-            <Route path={`/education`} element={<Education />} />
-            <Route path={`/experience`} element={<Experience />} />
-            <Route path={`/crypto`} element={<Crypto />} />
-            <Route path={`/projects`} element={<Projects />} />
-            <Route path={`/interests`} element={<Interests />} />
-          </Routes>
-        </StyledMain>
-        <Footer />
-      </Wrapper2>
-    </Wrapper>
+    <StyledBody>
+      <Wrapper>
+        <Nav />
+        <Wrapper2>
+          <StyledMain>
+            <Main />
+            <Routes>
+              <Route path={`/`} element={<Home />} />
+              <Route path={`/education`} element={<Education />} />
+              <Route path={`/experience`} element={<Experience />} />
+              <Route path={`/crypto`} element={<Crypto />} />
+              <Route path={`/projects`} element={<Projects />} />
+              <Route path={`/interests`} element={<Interests />} />
+            </Routes>
+          </StyledMain>
+          <Footer />
+        </Wrapper2>
+      </Wrapper>
+    </StyledBody>
   );
 }
 
+// Implementing RouterProvider to handling Routing/Navigation
 const router = createBrowserRouter([{ path: "*", Component: Root }]);
 export default function App() {
   return <RouterProvider router={router} />;

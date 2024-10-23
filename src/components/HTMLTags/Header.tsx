@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+//Create the styled components that will be used to handle elements in the header
 const HeaderWrapper = styled.header`
   text-align: center;
   background-color: #8fc0a9;
@@ -43,6 +44,7 @@ const Contact = styled.h4`
   }
 `;
 
+// Header Component including: headshot, website title, subtitle, email, and linkedin
 export default function Header() {
   return (
     <HeaderWrapper>

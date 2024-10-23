@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Header from "./Header.tsx";
 import styled from "styled-components";
 
+// creating styled components
 const StyledNav = styled.nav`
   background-color: #8fc0a9;
   width: 30%;
@@ -53,6 +54,7 @@ const StyledLink = styled(Link)`
   font-size: 1.4em;
 `;
 
+//Implemented Nav Bar with Routing
 export default function Nav() {
   return (
     <StyledNav>

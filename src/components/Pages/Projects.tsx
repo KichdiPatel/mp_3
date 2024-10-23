@@ -39,11 +39,13 @@ const Output = styled.h3`
 `;
 
 export default function Projects() {
+  // Using useState to define variables that I can use for the calculations
   const [firstNumber, setFirstNumber] = useState("");
   const [secondNumber, setSecondNumber] = useState("");
   const [result, setResult] = useState<string | number>("");
   const [isNeg, setIsNeg] = useState(false);
 
+  // This clears the calculators inputs
   function clearCalc() {
     setFirstNumber("");
     setSecondNumber("");
@@ -51,33 +53,44 @@ export default function Projects() {
     setIsNeg(false);
   }
 
+  // There is one function to check for +, -, *, /, and **
   function calculate(operation: string) {
     const first = Number(firstNumber);
     const second = Number(secondNumber);
     let calcOutput;
+    switch (operation) {
+      case "addition":
+        calcOutput = first + second;
+        break;
 
-    if (operation == "addition") {
-      calcOutput = first + second;
-    } else if (operation == "subtraction") {
-      calcOutput = first - second;
-    } else if (operation == "multiplication") {
-      calcOutput = first * second;
-    } else if (operation == "division") {
-      if (second != 0) {
-        calcOutput = first / second;
-      } else {
-        calcOutput = "Cannot divide by zero";
+      case "subtraction":
+        calcOutput = first - second;
+        break;
+
+      case "multiplication":
+        calcOutput = first * second;
+        break;
+
+      case "division":
+        if (second != 0) {
+          calcOutput = first / second;
+        } else {
+          calcOutput = "Cannot divide by zero";
+        }
+        break;
+
+      case "power": {
+        let total = 1;
+        for (let i = 0; i < second; i++) {
+          total *= first;
+        }
+        calcOutput = total;
+        break;
       }
-    } else if (operation == "power") {
-      let total = 1;
 
-      for (let i = 0; i < second; i++) {
-        total = total * first;
-      }
-
-      calcOutput = total;
-    } else {
-      calcOutput = 0;
+      default:
+        calcOutput = 0;
+        break;
     }
 
     setResult(calcOutput);

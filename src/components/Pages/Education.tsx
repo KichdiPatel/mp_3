@@ -9,6 +9,7 @@ const StyledWrapper = styled.div`
   flex-direction: column;
 `;
 
+// Page that discusses  my educational background
 export default function Education() {
   return (
     <>

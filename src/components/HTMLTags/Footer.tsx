@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+// Created Footer component to reduce code verbosity
+
 const StyledFooter = styled.footer`
   width: 100%;
   text-align: left;

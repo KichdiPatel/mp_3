@@ -2,6 +2,7 @@ import InfoBox from "../HelperElems/InfoBox";
 import styled from "styled-components";
 import PageTitle from "../HelperElems/PageTitle";
 
+
 const StyledWrapper = styled.div`
   width: 100%;
   max-width: 800px;
@@ -9,6 +10,7 @@ const StyledWrapper = styled.div`
   flex-direction: column;
 `;
 
+// Page that discusses Crypto Related Projects I have worked on
 export default function Crypto() {
   return (
     <>

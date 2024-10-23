@@ -12,6 +12,7 @@ const StyledText = styled.p`
   text-align: justify;
 `;
 
+// Home Page for Resume Site. This is the first page that is loaded by index.html
 export default function Home() {
   return (
     <>

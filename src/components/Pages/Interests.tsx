@@ -9,6 +9,7 @@ const StyledWrapper = styled.div`
   flex-direction: column;
 `;
 
+//This page shows my Skills/Interests
 export default function Interests() {
   return (
     <>
